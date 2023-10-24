@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Controller, Get, Body, Req, HttpCode, Post, UseGuards, Res, Response, UsePipes, SerializeOptions, UseInterceptors, ClassSerializerInterceptor } from "@nestjs/common";
 import { AuthenticationService } from "./authentication.service";
 import RegisterDto from "./dto/register.dto";

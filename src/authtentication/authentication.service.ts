@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { UsersService } from "src/users/users.services";
 import RegisterDto from "./dto/register.dto";
 import * as bcrypt from 'bcrypt';

@@ -9,13 +9,10 @@ async function bootstrap() {
   // const {httpAdapter} = app.get(HttpAdapterHost);
   // app.useGlobalFilters(new ExceptionsFilterLogger(httpAdapter));
 
-
-  app.useGlobalPipes(new ValidationPipe())
+  app.useGlobalPipes(new ValidationPipe());
 
   // Serialize the app(Transform response data before returning it to the user). Nest comes  equipped with ClassSerializerInterceptor which uses class-transformer under the hood.
-  app.useGlobalInterceptors(new ClassSerializerInterceptor(
-    app.get(Reflector)
-  ));
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   // Read cookies easily
   app.use(cookieParser());

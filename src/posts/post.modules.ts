@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from "@nestjs/common";
 import PostsController from "./post.controllers";
 import {PostsService} from "./post.services";
@@ -6,7 +7,7 @@ import Post from "./post.entity";
 
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Post])],
+    imports: [TypeOrmModule.forFeature([Post]),],
     controllers: [PostsController],
     providers: [PostsService]
 })

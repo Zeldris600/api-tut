@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable, HttpException, HttpStatus } from "@nestjs/common";
 // import { Post } from "./post.interface";
 import CreatePostDto from "./dto/createPost.dto";
@@ -71,9 +72,9 @@ export class PostsService {
         await this.postsRepository.save(newPost); // Populate DB with new entity
         return newPost;
         /*   const newPost = {
-              id: ++this.lastPostId,
+             id: ++this.lastPostId,
               ...post
-          } */
+          } */ 
     }
 
     /* --------   Updating Posts Using the Post Repository -------  */

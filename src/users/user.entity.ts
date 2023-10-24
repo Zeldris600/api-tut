@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 import { Expose, Exclude } from "class-transformer";
 
@@ -19,6 +20,9 @@ class User {
     @Exclude()
     @Column()
     public password: string;
+
+    @Exclude()
+    public currentHashedRefreshToken?: string;
 
 
 }

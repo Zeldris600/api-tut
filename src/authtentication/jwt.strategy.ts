@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { ExtractJwt, Strategy } from "passport-jwt";
 import { PassportStrategy } from "@nestjs/passport";
 import { Injectable } from "@nestjs/common";
@@ -19,7 +20,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
             jwtFromRequest: ExtractJwt.fromExtractors([(request: Request) => {
                 return request?.cookies?.Authentication;
             }]),
-            secretOrKey: configService.get('JWT_SECRET')
+            secretOrKey: configService.get('JWT_ACCESS_TOKEN_SECRET')
         })
     }
    //Use user Id encodeded! Get User data with validate fn

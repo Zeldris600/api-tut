@@ -1,4 +1,5 @@
-import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+/* eslint-disable prettier/prettier */
+import { HttpException, HttpStatus, Injectable, Logger } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import User from "./user.entity";
 import CreateUserDto from "./dto/createUser.dto";
@@ -6,6 +7,7 @@ import { Repository } from "typeorm";
 
 @Injectable()
 export class UsersService {
+    private logger = new Logger('UsersService')
     constructor(
         @InjectRepository(User)
         private usersRepository: Repository<User>
